@@ -1,0 +1,217 @@
+<encounters>
+  <encounter id="StartSequence" type ="TimelineSequence" hideStatsUI="true" hideHandUI="false">
+    <enemies>
+      <enemy type="IntroClassPicker" showStats="false" />
+    </enemies>
+    <sequence>
+      <script type="PlayTimeline" timelineName="IntroSequence" />
+    </sequence>
+  </encounter>
+  <encounter id="CrossRoadsEncounter" type="Combat" hideStatsUI="false" hideHandUI="false">
+    <enemies>
+      <enemy type="Wolf" showStats="true" />
+      <enemy type="Wolf" showStats="true" />
+    </enemies>
+    <sequence>
+      <script type="PlayTimeline" timelineName="GenericCombatStart" />
+    </sequence>
+    <rewards>
+      <reward type="RandomCard" classRestricted="true" />
+      <reward type="RandomCurrency" minAmount="50" maxAmount="100" />
+    </rewards>
+  </encounter>
+  <encounter id="EnterCaveDungeon" type="TimelineSequence" hideStatsUI="false" hideHandUI="false" >
+    <enemies>
+      <enemy type="Cave" showStats="false" />
+    </enemies>
+    <sequence>
+      <script type="PlayTimeline" timelineName="EnterCave" />
+    </sequence>
+  </encounter>
+  
+  <!-- Dungeons-->
+  <encounter id="CaveDungeon" type="RandomizedDungeon" hideStatsUI="false" hideHandUI="false">
+    <randomEncounters>
+      <randomEncounter>
+        <encounter id="Cave_GoblinFightEasy" weight="1"/>
+      </randomEncounter>
+      <randomEncounter>
+        <encounter id="GainHealingPotions" wweight="1"  />
+      </randomEncounter>
+      <randomEncounter>
+        <encounter id="Cave_GoblinFightMedium" weight="1" />
+      </randomEncounter>
+      <randomEncounter>
+        <encounter id="Rest" weight="1"/>
+      </randomEncounter>
+      <randomEncounter>
+        <encounter id="Shrine_Upgrade" weight="10" />
+        <encounter id="Shrine_Transform" weight="20" />
+        <encounter id="Chest_Rare" weight="5" />
+      </randomEncounter>
+      <randomEncounter>
+        <encounter id="Cave_Crocolisk" weight="5"/>
+        <encounter id="Cave_Eels" weight="1"/>
+        <encounter id="Cave_Pitfall" weight="1"/>
+      </randomEncounter>
+      <randomEncounter>
+        <encounter id="Cave_GoblinTaskMaster" weight="1"/>
+      </randomEncounter>
+      <randomEncounter>
+        <encounter id="DarkDealer" weight="5"/>
+        <encounter id="MagicMirror" weight="5" />
+        <encounter id="Cave_Bandit" weight="5" />
+      </randomEncounter>
+      <randomEncounter>
+        <encounter id="Rest" weight="1" />
+      </randomEncounter>
+      <randomEncounter>
+        <encounter id="Cave_GoblinBoss" weight="1"/>
+      </randomEncounter>
+    </randomEncounters>
+  </encounter>
+  
+  <!-- Combat-->
+  <encounter id="Cave_GoblinFightEasy">
+    <enemies>
+      <enemy type="GoblinScout" showStats="true" />
+    </enemies>
+    <sequence>
+      <script type="PlayTimeline" timelineName="GenericCombatStart" />
+    </sequence>
+    <rewards>
+      <reward type="RandomCard" classRestricted="true" />
+      <reward type="RandomCurrency" minAmount="50" maxAmount="100" />
+    </rewards>
+  </encounter>
+  <encounter id="Cave_GoblinFightMedium">
+    <enemies>
+      <enemy type="GoblinScout" showStats="true" />
+      <enemy type="GoblinScout" showStats="true" />
+      <enemy type="GoblinScout" showStats="true" />
+    </enemies>
+    <sequence>
+      <script type="PlayTimeline" timelineName="GenericCombatStart" />
+    </sequence>
+    <rewards>
+      <reward type="RandomCard" classRestricted="true" />
+      <reward type="RandomCurrency" minAmount="50" maxAmount="100" />
+    </rewards>
+  </encounter>
+  <encounter id="Cave_Crocolisk">
+    <enemies>
+      <enemy type="Crocolisk" showStats="true" />
+    </enemies>
+    <rewards>
+      <reward type="RandomCard" classRestricted="true" />
+      <reward type="RandomCurrency" minAmount="50" maxAmount="100" />
+    </rewards>
+  </encounter>
+  <encounter id="Cave_Eels">
+    <enemies>
+      <enemy type="Eel" showStats="true" />
+      <enemy type="Eel" showStats="true" />
+    </enemies>
+    <rewards>
+      <reward type="RandomCard" classRestricted="true" />
+      <reward type="RandomCurrency" minAmount="50" maxAmount="100" />
+    </rewards>
+  </encounter>
+  <encounter id="Cave_GoblinTaskMaster">
+    <enemies>
+      <enemy type="Goblin" showStats="true" />
+      <enemy type="GoblinTaskMaster" showStats="true" />
+      <enemy type="Goblin" showStats="true" />
+    </enemies>
+    <rewards>
+      <reward type="RandomCard" classRestricted="true" />
+      <reward type="RandomCurrency" minAmount="50" maxAmount="100" />
+    </rewards>
+  </encounter>
+  <encounter id="Cave_Bandit">
+    <enemies>
+      <enemy type="Bandit" showStats="true" />
+    </enemies>
+    <rewards>
+      <reward type="RandomCard" classRestricted="true" />
+      <reward type="RandomCurrency" minAmount="50" maxAmount="100" />
+    </rewards>
+  </encounter>
+  <encounter id="Cave_GoblinBoss">
+    <enemies>
+      <enemy type="GoblinBoss" showStats="true" />
+    </enemies>
+    <rewards>
+      <reward type="RandomCard" classRestricted="true" />
+      <reward type="RandomCurrency" minAmount="50" maxAmount="100" />
+      <reward type="RandomTrinket" />
+      <reward type="FullHeal" />
+    </rewards>
+  </encounter>
+  
+  <!-- Non-combat Entries-->
+  <encounter id="Rest">
+    <enemies>
+      <enemy type="Rester" showStats="false" />
+    </enemies>
+    <sequence>
+      <script type="PlayTimeline" timelineName="Rest" />
+    </sequence>
+  </encounter>
+  <encounter id="GainHealingPotions">
+    <enemies>
+      <enemy type="PotionGranter" showStats="false" />
+    </enemies>
+    <sequence>
+      <script type="PlayTimeline" timelineName="GainPotions" />
+    </sequence>
+  </encounter>
+  <encounter id="Shrine_Upgrade">
+    <enemies>
+      <enemy type="UpgradeShrine" showStats="false" />
+    </enemies>
+    <sequence>
+      <script type="PlayTimeline" timelineName="Shrine" />
+    </sequence>
+  </encounter>
+  <encounter id="Shrine_Transform">
+    <enemies>
+      <enemy type="TransformShrine" showStats="false" />
+    </enemies>
+    <sequence>
+      <script type="PlayTimeline" timelineName="Shrine" />
+    </sequence>
+  </encounter>
+  <encounter id="Chest_Rare">
+    <enemies>
+      <enemy type="RareChest" showStats="false" />
+    </enemies>
+    <sequence>
+      <script type="PlayTimeline" timelineName="Chest" />
+    </sequence>
+  </encounter>
+  <encounter id="Cave_Pitfall">
+    <enemies>
+      <enemy type="PitfallTrap" showStats="false" />
+    </enemies>
+    <sequence>
+      <script type="PlayTimeline" timelineName="Trap" />
+    </sequence>
+  </encounter>
+  <encounter id="DarkDealer">
+    <enemies>
+      <enemy type="DarkDealer" showStats="false" />
+    </enemies>
+    <sequence>
+      <script type="PlayTimeline" timelineName="DarkDealer" />
+    </sequence>
+  </encounter>
+  <encounter id="MagicMirror">
+    <enemies>
+      <enemy type="MagicMirror" showStats="false" />
+    </enemies>
+    <sequence>
+      <script type="PlayTimeline" timelineName="Trap" />
+    </sequence>
+  </encounter>
+</encounters>

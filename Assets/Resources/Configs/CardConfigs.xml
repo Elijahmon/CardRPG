@@ -1,0 +1,92 @@
+<cards>
+  <card type="ClassSelect_Warrior" displayName="A Warior" description="The Warrior marks those who are headstrong and master physical combat" imagePath="" cardType="ClassSelect" rarity="None">
+    <effects>
+      <effect type="SelectClass" class="Warrior"/>
+      <effect type="StarterLevel" amount ="5"/>
+      <effect type="GainStat" amount="25" stat="Health" />
+      <effect type="GainEquipment" equipment="WarriorsAxe" amount="1"/>
+      <effect type="GainTrinket" trinket="HardStone" amount="1"/>
+      <effect type="GainCard" card="BaseAttack" amount ="5" />
+      <effect type="GainCard" card="Rend" amount="2" />
+      <effect type="GainCard" card="Block" amount="3" />
+    </effects>
+  </card>
+  <card type="ClassSelect_Mage" displayName="A Mage" description="The Mage marks those who are scholarly and pursue untold knowledge and power" imagePath="" cardType="ClassSelect" rarity="None">
+    <effects>
+      <effect type="SelectClass" class="Mage"/>
+      <effect type="StarterLevel" amount ="5"/>
+      <effect type="GainStat" amount="10" stat="Health" />
+      <effect type="GainStat" amount="15" stat="MaxMana" />
+      <effect type="GainEquipment" equipment="MageStaff" amount="1"/>
+      <effect type="GainTrinket" trinket="ManaFocus" amount="1"/>
+      <effect type="GainCard" card="BaseAttack" amount ="4" />
+      <effect type="GainCard" card="Scorch" amount="2" />
+      <effect type="GainCard" card="Focus" amount="2" />
+      <effect type="GainCard" card="Block" amount="2" />
+    </effects>
+  </card>
+  <card type="ClassSelect_Ranger" displayName="A Ranger" description="The Ranger marks those who are adept and quick on their feet" imagePath="" cardType="ClassSelect" rarity="None">
+    <effects>
+      <effect type="SelectClass" class="Warrior"/>
+      <effect type="StarterLevel" amount ="5"/>
+      <effect type="GainStat" amount="15" stat="Health" />
+      <effect type="GainStat" amount="1" stat="Action" />
+      <effect type="GainEquipment" equipment="RangerBow" amount="1"/>
+      <effect type="GainTrinket" trinket="ShiftingAmulet" amount="1"/>
+      <effect type="GainCard" card="BaseAttack" amount ="5" />
+      <effect type="GainCard" card="MinorPoison" amount="3" />
+      <effect type="GainCard" card="Block" amount="2" />
+    </effects>
+  </card>
+  <card type="ClassSelect_None" displayName="Nothing" description="A mystery to be sure, no doors shall remain closed, anything is possible" imagePath="" cardType="ClassSelect" rarity="None">
+    <effects>
+      <effect type="SelectClass" class="None"/>
+      <effect type="StarterLevel" amount ="1"/>
+      <effect type="GainEquipment" equipment="MysteriousRing" amount="1"/>
+      <effect type="GainTrinket" trinket="HandyBauble" amount="1"/>
+      <effect type="GainCard" card="BaseAttack" amount ="5" />
+      <effect type="GainCard" card="Block" amount="4" />
+    </effects>
+  </card>
+  <card type="BaseAttack" displayName="Attack" description="Deals |PhysicalDamage|" imagePath="" cardType="Attack" rarity="Common" targetType="SingleEnemy">
+    <effects>
+      <effect type="PhysicalDamage" amount="1" />
+    </effects>
+  </card>
+  <card type="Block" displayName="Block" description="Block |GainArmor|" imagePath="" cardType="Armor" rarity="Common" targetType="Self">
+    <effects>
+      <effect type="GainArmor" amount="3" />
+    </effects>
+  </card>
+  <card type="MinorPoison" displayName="Poison" description="Inflicts |ApplyEffect|" imagePath="" cardType="Feat" rarity="Common" targetType="SingleEnemy">
+    <costs>
+      <cost type="Action" amount="1" />  
+    </costs>
+    <effects>
+      <effect type="ApplyEffect" effectType="Poison" amount="4" />
+    </effects>
+  </card>
+  <card type="Scorch" displayName="Scorch" description="Deals |MagicDamage| and applies |ApplyEffect|" imagePath="" cardType="Spell" rarity="Common" targetType="SingleEnemy">
+    <costs>
+      <cost type="Mana" amount="4" />  
+    </costs>
+    <effects>
+      <effect type="MagicDamage" amount="1" />
+      <effect type="ApplyEffect" effectType="Burn" amount="1" />
+    </effects>
+  </card>
+  <card type="Focus" displayName="Focus" description="Gain |GainMana|" imagePath="" cardType="Mana" rarity="Common" targetType="Self" >
+    <effects>
+      <effect type="GainMana" amount="5" />
+    </effects>
+  </card>
+  <card type="Rend" displayName="Rend" description="Deals |PhysicalDamage| and applies |ApplyEffect|" imagePath="" cardType="Feat" rarity="Common" targetType="SingleEnemy">
+    <costs>
+      <cost type="Action" amount="1" />  
+    </costs>
+    <effects>
+      <effect type="PhysicalDamage" amount="2" />
+      <effect type="ApplyEffect" effectType="Bleed" amount="4" />
+    </effects>
+  </card>
+</cards>

@@ -1,0 +1,119 @@
+<enemies>
+  <enemy type="IntroClassPicker" name="Mysterious Woman" >
+    <health amount ="1" />
+    <mana amount ="0" max="0" />
+    <action amount="0" />
+    <deck>
+      <card type="ClassSelect_Warrior" />
+      <card type="ClassSelect_Mage" />
+      <card type="ClassSelect_Ranger" />
+      <card type="ClassSelect_None" />
+    </deck>
+  </enemy>
+  <enemy type="Wolf" name="Wolf">
+    <health amount="5" />
+    <mana amount="0" />
+    <action amount="1" />
+    <hand maxHandSize="3" drawsPerTurn="3" />
+    <deck>
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="Rend" />
+    </deck>
+  </enemy>
+  <enemy type="GoblinScout" name="Goblin Scout">
+    <health amount="10" />
+    <mana amount="0" />
+    <action amount="1" />
+    <hand maxHandSize="4" drawsPerTurn="2" />
+    <deck>
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="RaiseAlarm" />
+      <card type="Gash" />
+    </deck>
+  </enemy>
+  <enemy type="Goblin" name="Goblin">
+    <health amount="15" />
+    <mana amount="0" />
+    <action amount="1" />
+    <hand maxHandSize="2" drawsPerTurn="2" />
+    <deck>
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="Gash" />
+      <card type="Frenzy" />
+    </deck>
+  </enemy>
+  <enemy type="GoblinTaskMaster" name="Goblin Task Master">
+    <health amount="30" />
+    <mana amount="0" />
+    <action amount="1" />
+    <hand maxHandSize="5" drawsPerTurn="3" />
+    <deck>
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="Rally" />
+      <card type="SummonGoblin" />
+      <card type="Block" />
+      <card type="Rend" />
+      <card type="Rally" />
+      <card type="BaseAttack" />
+    </deck>
+  </enemy>
+  <enemy type="Crocolisk" name="Crocolisk">
+    <health amount="40" />
+    <mana amount="0" />
+    <action amount="1" />
+    <hand maxHandSize="3" drawsPerTurn="2" />
+    <deck>
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="Rend" />
+      <card type="StoneSkin" />
+      <card type="Rend" />
+    </deck>
+  </enemy>
+  <enemy type="Eel" name="Eel">
+    <health amount="18" />
+    <mana amount="20" />
+    <action amount="1" />
+    <hand maxHandSize="4" drawsPerTurn="3" />
+    <deck>
+      <card type="Zap" />
+      <card type="Zap" />
+      <card type="Focus" />
+      <card type="BaseAttack" />
+      <card type="Rend" />
+      <card type="StoneSkin" />
+      <card type="Rend" />
+    </deck>
+  </enemy>
+  <enemy type="GoblinBoss" name="Goblin Chieftan">
+    <health amount="80" />
+    <mana amount="0" />
+    <action amount="3" />
+    <hand maxHandSize="4" drawsPerTurn="3" />
+    <deck>
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="BaseAttack" />
+      <card type="Rend" />
+      <card type="StoneSkin" />
+      <card type="Rend" />
+    </deck>
+  </enemy>
+</enemies>

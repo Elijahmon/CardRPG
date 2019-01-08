@@ -1,0 +1,29 @@
+<playerLevels>
+    <level level="1" xp="0">
+        <levelupRewards/>
+    </level>
+    <level level="2" xp="2">
+        <levelupRewards>
+            <reward type="GainStat" stat="Health" amount="5" />
+            <reward type="GainStat" stat="StartingHand" amount="1" />
+            <reward type="Heal" amount="999999999" />
+        </levelupRewards>
+    </level>
+    <level level="3" xp="3">
+    </level>
+    <level level="4" xp="4">
+    </level>
+    <level level="5" xp="6">
+    </level>
+    <level level="6" xp="8">
+    </level>
+    <level level="7" xp="8">
+    </level>
+    <level level="8" xp="8">
+    </level>
+    <level level="9" xp="8">
+    </level>
+    <level level="10" xp="8">
+    </level>
+
+</playerLevels>
